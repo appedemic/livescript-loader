@@ -1,0 +1,10 @@
+{
+	"name": "livescript-loader",
+	"version": "0.1.0",
+	"author": "Derk Bell",
+	"description": "LiveScript loader module for webpack",
+	"dependencies": {
+		"LiveScript": ">=1.2.0",
+		"loader-utils": "0.2.x"
+	}
+}
