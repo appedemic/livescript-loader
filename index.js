@@ -8,7 +8,8 @@ module.exports = function(source) {
 	var result = LiveScript.compile(source, {
 		filename: lsRequest,
 		bare: true,
-		const: false
+		const: false,
+    prelude: true
 	});
 	this.callback(null, result);
 }
