@@ -9,7 +9,7 @@ module.exports = function(source) {
 		filename: lsRequest,
 		bare: true,
 		const: false,
-    prelude: true
+    header: false
 	});
 	this.callback(null, result);
 }
