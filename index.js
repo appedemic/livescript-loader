@@ -1,4 +1,4 @@
-var LiveScript = require('LiveScript');
+var livescript = require('livescript');
 var loaderUtils = require("loader-utils");
 
 module.exports = function(source) {
@@ -18,7 +18,7 @@ module.exports = function(source) {
 		config[attr] = query[attr];
 	});
 
-	var result = LiveScript.compile(source, config);
+	var result = livescript.compile(source, config);
 	this.callback(null, result);
 }
 module.exports.seperable = true;
