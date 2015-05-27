@@ -3,6 +3,9 @@
 	"version": "0.1.4",
 	"author": "Derk Bell",
 	"description": "LiveScript loader module for webpack",
+	"scripts": {
+		"build": "lsc -cb ./index.ls"
+	},
 	"dependencies": {
 		"livescript": "^1.4.0",
 		"loader-utils": "0.2.x"
