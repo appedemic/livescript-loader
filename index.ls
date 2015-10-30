@@ -21,4 +21,5 @@ module.exports = (source) !->
 
 	result = LiveScript.compile source, config
 	result.map.set-source-content ls-request, source
-	@callback null, result.code, result.map.to-string!
+	result.map._file = ls-request # Monkeypatch filename in sourcemap
+	@callback null, result.code, JSON.parse(result.map.to-string!)
