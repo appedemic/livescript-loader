@@ -21,7 +21,8 @@ module.exports = function(source){
   import$(config, query);
   result = LiveScript.compile(source, config);
   result.map.setSourceContent(lsRequest, source);
-  this.callback(null, result.code, result.map.toString());
+  result.map._file = lsRequest;
+  this.callback(null, result.code, JSON.parse(result.map.toString()));
 };
 function import$(obj, src){
   var own = {}.hasOwnProperty;
