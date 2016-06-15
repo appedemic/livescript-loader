@@ -20,6 +20,8 @@ module.exports = (source) !->
 	config <<< query
 
 	result = LiveScript.compile source, config
+	if config.map == 'none'
+		return result
 	result.map.set-source-content ls-request, source
 	result.map._file = ls-request # Monkeypatch filename in sourcemap
 	@callback null, result.code, JSON.parse(result.map.to-string!)
