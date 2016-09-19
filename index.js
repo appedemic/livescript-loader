@@ -20,6 +20,9 @@ module.exports = function(source){
   query = LoaderUtils.parseQuery(this.query);
   import$(config, query);
   result = LiveScript.compile(source, config);
+  if (config.map === 'none') {
+    return result;
+  }
   result.map.setSourceContent(lsRequest, source);
   result.map._file = lsRequest;
   this.callback(null, result.code, JSON.parse(result.map.toString()));
