@@ -1,6 +1,6 @@
 {
 	"name": "livescript-loader",
-	"version": "0.1.5",
+	"version": "0.1.6",
 	"author": "Derk Bell",
 	"description": "LiveScript loader module for webpack",
 	"scripts": {
