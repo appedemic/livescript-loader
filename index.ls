@@ -16,7 +16,7 @@ module.exports = (source) !->
 		const: false
 		header: false
 
-	query = LoaderUtils.parse-query this.query
+	query = LoaderUtils.getOptions this
 	config <<< query
 
 	result = LiveScript.compile source, config
