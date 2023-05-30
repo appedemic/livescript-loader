@@ -7,11 +7,11 @@
 		"build": "lsc -cb ./index.ls"
 	},
 	"dependencies": {
-		"livescript": "^1.4.0",
-		"loader-utils": "0.2.x"
+		"livescript": "^1.6.0",
+		"loader-utils": "1.2.x"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/appedemic/livescript-loader.git"
+		"url": "git://github.com/godmodelabs/livescript-loader.git"
 	}
 }
